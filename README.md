@@ -1,6 +1,9 @@
 https://data-engineering-big-data-sales-project-codewithabhay.streamlit.app/
 
 
+# 📊 BigMart Sales Prediction Workflow
+
+```mermaid
 flowchart TD
     subgraph Ingestion [📥 Data Ingestion]
         A1[📄 df_item.xml] --> A4[(MySQL: item_info)]
@@ -25,3 +28,10 @@ flowchart TD
         C2 --> D1[🌐 Streamlit Web Interface]
         D1 --> D2[📊 Predict Sales]
     end
+
+
+    subgraph Deployment [🚀 Streamlit App]
+        C2 --> D1[🌐 Streamlit Web Interface]
+        D1 --> D2[📊 Predict Sales]
+    end
+
